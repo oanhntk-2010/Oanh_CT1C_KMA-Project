@@ -1,4 +1,4 @@
-describe('Playlists Screen Testing', () => {
+describe('Track Screen Testing', () => {
   beforeAll(async () => {
     await device.launchApp();
     await element(by.id('trackTab')).tap();
