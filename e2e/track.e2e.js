@@ -15,7 +15,7 @@ describe('Track Screen Testing', () => {
   });
 
   // Check rename track //
-  // TC52, TC53, TC68, TC69
+  // TC52, TC53, TC66, TC67
   it('should show rename options', async () => {
     await expect(element(by.id('trackOption0'))).toBeVisible();
     await element(by.id('trackOption0')).tap();
@@ -25,11 +25,11 @@ describe('Track Screen Testing', () => {
     await expect(element(by.text('CANCEL'))).toBeVisible();
     await expect(element(by.text('RENAME'))).toBeVisible();
 
-    // TC68
+    // TC66
     await element(by.text('CANCEL')).tap();
     await expect(element(by.text('RENAME'))).not.toBeVisible();
 
-    // TC69
+    // TC67
     await element(by.text('Rename')).tap();
     await element(by.text('CANCEL')).multiTap(2);
     await expect(element(by.text('RENAME'))).not.toBeVisible();
@@ -37,7 +37,7 @@ describe('Track Screen Testing', () => {
     await device.pressBack();
   });
 
-  // TC66, TC67
+  // TC664, TC65
   it('should able to rename song', async () => {
     const songElement = element(
       by.label('Track Option').withAncestor(by.label('Laylalay')),
