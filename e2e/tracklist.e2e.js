@@ -14,7 +14,7 @@ describe('Check play track', () => {
     await expect(element(by.id('trackScreen'))).toBeVisible();
   });
 
-  // TC08, TC09
+  // TC08, TC09: check display when tap in any song
   it('should play track', async () => {
     const songElement = element(by.label('Nàng Thơ'));
 
