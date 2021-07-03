@@ -1,4 +1,4 @@
-describe('Check play track', () => {
+describe('Check tracklist', () => {
   beforeAll(async () => {
     await device.launchApp();
     await element(by.id('trackTab')).tap();
