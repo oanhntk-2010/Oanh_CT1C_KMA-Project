@@ -9,12 +9,12 @@ describe('Check tracklist', () => {
     // await element(by.id('trackTab')).tap();
   });
 
-  // TC03
+  // TC01
   it('should show track screen after tap', async () => {
     await expect(element(by.id('trackScreen'))).toBeVisible();
   });
 
-  // TC08, TC09: check display when tap in any song
+  // TC04, TC05: check display when tap in any song
   it('should play track', async () => {
     const songElement = element(by.label('Nàng Thơ'));
 
@@ -37,7 +37,7 @@ describe('Check tracklist', () => {
 
   });
 
-  // TC10, TC11, TC17, TC18
+  // T06, TC07, TC13, TC14
   it('should able to show track options', async () => {
     const songElement = element(by.label('Track Option').withAncestor(by.label('Nàng Thơ')));
     await expect(songElement).toBeVisible();
@@ -58,7 +58,7 @@ describe('Check tracklist', () => {
     await device.pressBack();
   });
 
-  // TC12, TC13, TC14, TC15
+  // TC08, TC09, TC10, TC11
   it('should able to play and pause', async () => {
     await device.reloadReactNative();
     await element(by.id('trackTab')).tap();
@@ -78,7 +78,7 @@ describe('Check tracklist', () => {
     await expect(element(by.id('playIcon').withAncestor(by.id('playerFooter')))).toBeVisible();
   });
 
-  // TC16
+  // TC12
   it('should show full player', async () => {
     const songElement = element(by.label('Nàng Thơ'));
 
@@ -92,7 +92,7 @@ describe('Check tracklist', () => {
     await device.pressBack();
   });
 
-  // TC19, TC20, TC21
+  // TC15, TC16, TC17
   it('should able to add track to playlist', async () => {
     const songElement = element(by.label('Track Option').withAncestor(by.label('Nàng Thơ')));
     await expect(songElement).toBeVisible();
