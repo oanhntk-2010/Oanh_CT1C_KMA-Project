@@ -16,13 +16,13 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.id('playlistsScreen'))).toBeVisible();
   });
 
-  // TC04
+  // TC01
   it('should show playlists screen after tap', async () => {
     // await expect(element(by.text('Playlists'))).toBeVisible();
     await expect(element(by.text('Create new playlist'))).toBeVisible();
   });
 
-  // TC05
+  // TC04
   it('should show song of playlist', async () => {
     await expect(element(by.id('listItem0'))).toBeVisible();
     await element(by.id('listItem0')).tap();
@@ -31,7 +31,7 @@ describe('Playlists Screen Testing', () => {
     await device.pressBack();
   });
 
-  // TC06
+  // TC05
   it('should show song of playlist', async () => {
     await expect(element(by.id('listItem0'))).toBeVisible();
     await element(by.id('listItem0')).multiTap(2);
@@ -40,7 +40,7 @@ describe('Playlists Screen Testing', () => {
     await device.pressBack();
   });
 
-  // TC07
+  // TC06
   it('should show playlists options', async () => {
     // await expect(element(by.text('Playlists'))).toBeVisible();
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
@@ -51,7 +51,7 @@ describe('Playlists Screen Testing', () => {
     await device.pressBack();
   });
 
-  // TC08
+  // TC07
   it('should show playlists options', async () => {
     // await expect(element(by.text('Playlists'))).toBeVisible();
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
@@ -64,7 +64,7 @@ describe('Playlists Screen Testing', () => {
 
   // Check create playlist //
 
-  // TC35 Create playlist
+  // TC03 Create playlist
   it('should show create playlist popup', async () => {
     // await expect(element(by.text('Playlists'))).toBeVisible();
     await element(by.text('Create new playlist')).tap();
@@ -72,7 +72,7 @@ describe('Playlists Screen Testing', () => {
     await element(by.id('cancelButton')).tap();
   });
 
-  // TC36 Create playlist
+  // TC01, 14 Create playlist
   it('should show create playlist popup action', async () => {
     // await expect(element(by.text('Playlists'))).toBeVisible();
     await element(by.text('Create new playlist')).tap();
@@ -83,7 +83,7 @@ describe('Playlists Screen Testing', () => {
     await element(by.id('cancelButton')).tap();
   });
 
-  // TC37 Create demo playlist
+  // TC04, 13 Create demo playlist
   it('should show create playlist ', async () => {
     await element(by.text('Create new playlist')).tap();
 
@@ -93,7 +93,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('test playlist'))).toBeVisible();
   });
 
-  // TC38 should show create playlist number name
+  // TC05 should show create playlist number name
   it('should show create playlist number name', async () => {
     await element(by.text('Create new playlist')).tap();
 
@@ -103,7 +103,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('123'))).toBeVisible();
   });
 
-  // TC39
+  // TC06
   it('should show create playlist special name', async () => {
     await element(by.text('Create new playlist')).tap();
 
@@ -113,7 +113,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('!!!'))).toBeVisible();
   });
 
-  // TC40
+  // TC07
   it('should show create playlist vietnamese name', async () => {
     await element(by.text('Create new playlist')).tap();
 
@@ -123,7 +123,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('Hay Nhất'))).toBeVisible();
   });
 
-  // TC41
+  // TC08
   it('should show create playlist lowercase name', async () => {
     await element(by.text('Create new playlist')).tap();
 
@@ -133,7 +133,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('nhạc hay'))).toBeVisible();
   });
 
-  // TC42
+  // TC09
   it('should show create playlist uppercase name', async () => {
     await element(by.text('Create new playlist')).tap();
 
@@ -143,7 +143,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('NHẠC HAY NHẤT'))).toBeVisible();
   });
 
-  // TC43
+  // TC10
   it('should not able create playlist with empty name', async () => {
     await element(by.text('Create new playlist')).tap();
     await expect(element(by.id('saveButton'))).toBeVisible();
@@ -153,7 +153,7 @@ describe('Playlists Screen Testing', () => {
     await element(by.id('cancelButton')).tap();
   });
 
-  // TC44
+  // TC11
   it('should not able create playlist with space name', async () => {
     await element(by.text('Create new playlist')).tap();
     await element(by.id('dialogInput')).replaceText('    ');
@@ -164,7 +164,7 @@ describe('Playlists Screen Testing', () => {
     await element(by.id('cancelButton')).tap();
   });
 
-  // TC45
+  // TC12
   it('should not able create playlist with exist name', async () => {
     await element(by.text('Create new playlist')).tap();
     await element(by.id('dialogInput')).replaceText('Hay Nhất');
@@ -176,7 +176,7 @@ describe('Playlists Screen Testing', () => {
   });
 
   // Check rename playlist //
-  // TC18, TC19, TC33, TC34
+  // TC15, TC16, TC30, TC31
   it('should show rename options', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -196,7 +196,7 @@ describe('Playlists Screen Testing', () => {
     await device.pressBack();
   });
 
-  // TC31
+  // TC28
   it('should able to rename playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -209,7 +209,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('Hay Nhat 111'))).toBeVisible();
   });
 
-  // TC32
+  // TC29
   it('should able to rename playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -222,7 +222,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('Hay Nhat 1111'))).toBeVisible();
   });
 
-  // TC20
+  // TC17
   it('should able to rename alphabet playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -235,7 +235,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('abc'))).toBeVisible();
   });
 
-  // TC21
+  // TC18
   it('should able to rename number name playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -248,7 +248,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('4567'))).toBeVisible();
   });
 
-  // TC22
+  // TC19
   it('should able to rename special name playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -261,7 +261,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('4567'))).toBeVisible();
   });
 
-  // TC23
+  // TC20
   it('should able to rename vietnamese name playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -274,7 +274,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('Playlist Hay Nhất'))).toBeVisible();
   });
 
-  // TC24
+  // TC21
   it('should able to rename lowercase name playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -287,7 +287,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('nhạc hay tháng'))).toBeVisible();
   });
 
-  // TC25
+  // TC22
   it('should able to rename uppercase name playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -300,7 +300,7 @@ describe('Playlists Screen Testing', () => {
     await expect(element(by.text('NHẠC HAY NĂM 2021'))).toBeVisible();
   });
 
-  // TC26, TC27, TC28, TC29, TC30
+  // TC23, TC24, TC25, TC26, TC27
   it('should able to rename uppercase name playlist', async () => {
     await expect(element(by.id('showOptionButton0'))).toBeVisible();
     await element(by.id('showOptionButton0')).tap();
@@ -328,7 +328,7 @@ describe('Playlists Screen Testing', () => {
   });
 
   // Check delete playlist //
-  // TC 13, 16, 17, 14
+  // TC 32, 33, 34, 35, 36
   it('should able to delete playlist ', async () => {
     await device.reloadReactNative();
     await element(by.id('libraryTab')).tap();
