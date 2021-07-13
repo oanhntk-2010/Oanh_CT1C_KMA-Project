@@ -11,7 +11,7 @@ describe('Check player', () => {
     await element(by.text('Nàng Thơ').withAncestor(by.id('playerFooter'))).tap();
   });
 
-  // TC30, 31
+  // TC01, TC03
   it('should show full player', async () => {
     await expect(element(by.id('playerScreen'))).toBeVisible();
 
@@ -19,7 +19,7 @@ describe('Check player', () => {
     await expect(element(by.id('artistName').and(by.text('Hoàng Dũng')))).toBeVisible();
   });
 
-  // TC37, 38
+  // TC04, 05
   it('should able to press next', async () => {
     await expect(element(by.id('nextIcon'))).toBeVisible();
     await element(by.id('nextIcon')).tap();
@@ -28,7 +28,7 @@ describe('Check player', () => {
     await expect(element(by.id('artistName').and(by.text('Hoàng Dũng')))).not.toBeVisible();
   });
 
-  // TC35, 36
+  // TC06, 07
   it('should able to press prev', async () => {
     await expect(element(by.id('prevIcon'))).toBeVisible();
     await element(by.id('prevIcon')).tap();
@@ -37,7 +37,7 @@ describe('Check player', () => {
     await expect(element(by.id('artistName').and(by.text('Hoàng Dũng')))).not.toBeVisible();
   });
 
-  // TC39, 40, 41
+  // TC08, 09, 10
   it('should able to play and pause', async () => {
     
     await expect(element(by.id('pauseIcon'))).toBeVisible()
